@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\subtitle_layer.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\layout\\subtitle_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_surface_layer.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\layout\\video_surface_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\playback_control_layer.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\layout\\playback_control_layer.xml"
+    }
+]

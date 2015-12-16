@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_play_large.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_play_large.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_full_screen.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_full_screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_pause_large.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_pause_large.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_return_from_full_screen.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_return_from_full_screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_play.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_play.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_overflow.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_overflow.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_action_pause.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_action_pause.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\gmf_icon.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\gmf_icon.png"
+    }
+]
