@@ -3,13 +3,23 @@ package com.fish.acfun;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.fish.acfun.base.BaseActivity;
 import com.fish.acfun.model.VideoItem;
 import com.fish.acfun.player.ImaPlayer;
+import com.fish.acfun.widget.ProgressAnimBar;
 import com.google.android.libraries.mediaframework.exoplayerextensions.Video;
 
 import butterknife.Bind;
@@ -26,11 +36,11 @@ public class MainActivity extends BaseActivity{
     ImageView imageView;
     @Bind(R.id.video_bottom)
     View bottom;
-    private ImaPlayer imaPlayer;
-
-    String title;
-    String videoUrl;
-    String videoType;
+//    @Nullable
+//    @Bind(R.id.image_loading)
+//    SimpleDraweeView simpleDraweeView;
+    @Bind(R.id.progressbar)
+    ProgressAnimBar progressAnimBar;
 
     @OnClick(R.id.video_small_screen)
     void enterFullScreen(){
@@ -48,7 +58,39 @@ public class MainActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        initView();
+        start();
+    }
+
+//    private void initView(){
+//        ImageRequest request = ImageRequestBuilder.newBuilderWithResourceId(R.drawable.image_loading_holder).build();
+//        DraweeController controller = Fresco.newDraweeControllerBuilder()
+//                .setImageRequest(request)
+//                .setAutoPlayAnimations(true)
+//                .build();
+//        simpleDraweeView.setController(controller);
+//    }
+
+    private void start(){
+        progressAnimBar.start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                handler.sendEmptyMessage(0);
+            }
+        }).start();
     }
 
 
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+           progressAnimBar.stop();
+        }
+    };
 }

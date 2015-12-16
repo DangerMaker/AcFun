@@ -28,4 +28,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:8.3.0'
     compile project(':googlemediaframework')
     compile files('libs/ima-android-sdk-beta13.3.jar')
+    compile 'com.facebook.fresco:fresco:0.8.1'
+    compile 'com.facebook.fresco:imagepipeline-okhttp:0.8.1'
 }

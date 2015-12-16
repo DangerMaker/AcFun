@@ -1,6 +1,5 @@
 package com.fish.acfun;
 
-import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,7 +25,7 @@ public class VideoActivity extends BaseActivity {
     @Bind(R.id.loading)
     FrameLayout loading;
     private ImaPlayer imaPlayer;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
