@@ -45,12 +45,15 @@ public class SimpleVideoPlayer {
    */
   private final LayerManager layerManager;
 
+  public PlaybackControlLayer getPlaybackControlLayer() {
+    return playbackControlLayer;
+  }
+
   /**
    * The customizable view for playback control. It handles pause/play, fullscreen, seeking,
    * title, and action buttons.
    */
   private final PlaybackControlLayer playbackControlLayer;
-
   /**
    * Displays subtitles at bottom center of video player.
    */

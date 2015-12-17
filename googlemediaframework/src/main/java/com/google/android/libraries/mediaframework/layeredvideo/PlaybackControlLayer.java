@@ -268,12 +268,6 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
   private TextView endTime;
 
   /**
-   * Makes player  enter or leave fullscreen. This button is not displayed unless there is a
-   * {@link FullscreenCallback} associated with this object.
-   */
-  private ImageButton fullscreenButton;
-
-  /**
    * This callback is triggered when going to fullscreen and returning from fullscreen.
    */
   private FullscreenCallback fullscreenCallback;
@@ -326,7 +320,7 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
   /**
    * Displays the play icon when the video is playing, or the pause icon when the video is playing.
    */
-  private ImageButton pausePlayButton;
+  private ImageView pausePlayButton;
 
   /**
    * Displays a track and a thumb which can be used to seek to different time points in the video.
@@ -356,7 +350,7 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
    * Contains the logo, video title, and other actions button. It can be tinted with a color for
    * branding.
    */
-  private RelativeLayout topChrome;
+  private LinearLayout topChrome;
 
   /**
    * This is the root view which contains all other views that make up the playback control layer.
@@ -444,7 +438,7 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
 
     LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
 
-    view = (FrameLayout) inflater.inflate(R.layout.playback_control_layer, null);
+    view = (FrameLayout) inflater.inflate(R.layout.playback_control_land_layer, null);
     setupView();
 
     originalContainerLayoutParams = layerManager
@@ -526,8 +520,6 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
 
       container.setLayoutParams(originalContainerLayoutParams);
 
-      fullscreenButton.setImageResource(R.drawable.ic_action_full_screen);
-
       isFullscreen = false;
     } else {
       fullscreenCallback.onGoToFullscreen();
@@ -554,10 +546,8 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
 //      );
 
       container.setLayoutParams(Util.getLayoutParamsBasedOnParent(container,
-          ViewGroup.LayoutParams.MATCH_PARENT,
-          ViewGroup.LayoutParams.MATCH_PARENT));
-
-      fullscreenButton.setImageResource(R.drawable.ic_action_return_from_full_screen);
+              ViewGroup.LayoutParams.MATCH_PARENT,
+              ViewGroup.LayoutParams.MATCH_PARENT));
 
       isFullscreen = true;
     }
@@ -781,11 +771,11 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
    */
   public void setFullscreenCallback(FullscreenCallback fullscreenCallback) {
     this.fullscreenCallback = fullscreenCallback;
-    if (fullscreenButton != null && fullscreenCallback != null) {
-      fullscreenButton.setVisibility(View.VISIBLE);
-    } else if (fullscreenButton != null && fullscreenCallback == null) {
-      fullscreenButton.setVisibility(View.INVISIBLE);
-    }
+//    if (fullscreenButton != null && fullscreenCallback != null) {
+//      fullscreenButton.setVisibility(View.VISIBLE);
+//    } else if (fullscreenButton != null && fullscreenCallback == null) {
+//      fullscreenButton.setVisibility(View.INVISIBLE);
+//    }
   }
 
   /**
@@ -834,15 +824,14 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
    */
   private void setupView() {
     // Bind fields to UI elements.
-    pausePlayButton = (ImageButton) view.findViewById(R.id.pause);
-    fullscreenButton = (ImageButton) view.findViewById((R.id.fullscreen));
+    pausePlayButton = (ImageView) view.findViewById(R.id.pause);
     seekBar = (SeekBar) view.findViewById(R.id.mediacontroller_progress);
     videoTitleView = (TextView) view.findViewById(R.id.video_title);
     endTime = (TextView) view.findViewById(R.id.time_duration);
     currentTime = (TextView) view.findViewById(R.id.time_current);
     logoImageView = (ImageView) view.findViewById(R.id.logo_image);
     playbackControlRootView = (FrameLayout) view.findViewById(R.id.middle_section);
-    topChrome = (RelativeLayout) view.findViewById(R.id.top_chrome);
+    topChrome = (LinearLayout) view.findViewById(R.id.top_chrome);
     bottomChrome = (LinearLayout) view.findViewById(R.id.bottom_chrome);
     actionButtonsContainer = (LinearLayout) view.findViewById(R.id.actions_container);
 
@@ -856,18 +845,18 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
     });
 
     if (fullscreenCallback == null) {
-      fullscreenButton.setVisibility(View.INVISIBLE);
+//      fullscreenButton.setVisibility(View.INVISIBLE);
     }
     // Go into fullscreen when the fullscreen button is clicked.
-    fullscreenButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        doToggleFullscreen();
-        show(DEFAULT_TIMEOUT_MS);
-        updateActionButtons();
-        updateColors();
-      }
-    });
+//    fullscreenButton.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View view) {
+//        doToggleFullscreen();
+//        show(DEFAULT_TIMEOUT_MS);
+//        updateActionButtons();
+//        updateColors();
+//      }
+//    });
 
     seekBar.setMax(1000);
 
@@ -1020,7 +1009,7 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
     endTime.setTextColor(textColor);
     videoTitleView.setTextColor(textColor);
 
-    fullscreenButton.setColorFilter(controlColor);
+//    fullscreenButton.setColorFilter(controlColor);
     pausePlayButton.setColorFilter(controlColor);
     seekBar.getProgressDrawable().setColorFilter(seekbarColor, PorterDuff.Mode.SRC_ATOP);
     seekBar.getThumb().setColorFilter(seekbarColor, PorterDuff.Mode.SRC_ATOP);
@@ -1051,9 +1040,9 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
     }
 
     if (playerControl.isPlaying()) {
-      pausePlayButton.setImageResource(R.drawable.ic_action_pause_large);
+      pausePlayButton.setImageResource(R.drawable.icon_pause);
     } else {
-      pausePlayButton.setImageResource(R.drawable.ic_action_play_large);
+      pausePlayButton.setImageResource(R.drawable.icon_play);
     }
   }
 
@@ -1080,7 +1069,7 @@ public class PlaybackControlLayer implements Layer, PlayerControlCallback {
     }
 
     if (endTime != null) {
-      endTime.setText(stringForTime(duration));
+      endTime.setText("/" + stringForTime(duration));
     }
     if (currentTime != null) {
       currentTime.setText(stringForTime(position));

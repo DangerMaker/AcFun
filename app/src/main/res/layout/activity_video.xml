@@ -17,4 +17,13 @@
         >
     </FrameLayout>
 
+    <com.fish.acfun.widget.ProgressAnimBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+    </com.fish.acfun.widget.ProgressAnimBar>
+
+
 </RelativeLayout>

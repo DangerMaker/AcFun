@@ -14,35 +14,53 @@ public final class R {
         public static final int transparent_black_hex_8=0x7f040000;
     }
     public static final class drawable {
-        public static final int gmf_icon=0x7f020000;
-        public static final int ic_action_full_screen=0x7f020001;
-        public static final int ic_action_overflow=0x7f020002;
-        public static final int ic_action_pause=0x7f020003;
-        public static final int ic_action_pause_large=0x7f020004;
-        public static final int ic_action_play=0x7f020005;
-        public static final int ic_action_play_large=0x7f020006;
-        public static final int ic_action_return_from_full_screen=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
+        public static final int arrow_white=0x7f020000;
+        public static final int btn_back_nor=0x7f020001;
+        public static final int btn_player_back_nor=0x7f020002;
+        public static final int gmf_icon=0x7f020003;
+        public static final int ic_action_full_screen=0x7f020004;
+        public static final int ic_action_overflow=0x7f020005;
+        public static final int ic_action_pause=0x7f020006;
+        public static final int ic_action_pause_large=0x7f020007;
+        public static final int ic_action_play=0x7f020008;
+        public static final int ic_action_play_large=0x7f020009;
+        public static final int ic_action_return_from_full_screen=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int icon_lock=0x7f02000c;
+        public static final int icon_logo_in_player=0x7f02000d;
+        public static final int icon_open_barrage=0x7f02000e;
+        public static final int icon_pause=0x7f02000f;
+        public static final int icon_play=0x7f020010;
+        public static final int icon_progress_thumb=0x7f020011;
+        public static final int icon_send_barrage=0x7f020012;
+        public static final int icon_set=0x7f020013;
+        public static final int indicator_quality=0x7f020014;
+        public static final int progress_holo_light=0x7f020015;
+        public static final int seekbar_bg=0x7f020016;
+        public static final int seekbar_front=0x7f020017;
+        public static final int seekbar_primary=0x7f020018;
     }
     public static final class id {
         public static final int actions_container=0x7f070004;
         public static final int bottom_chrome=0x7f070006;
-        public static final int fullscreen=0x7f07000a;
+        public static final int fullscreen=0x7f07000b;
         public static final int logo_image=0x7f070002;
-        public static final int mediacontroller_progress=0x7f070008;
+        public static final int mediacontroller_progress=0x7f070007;
         public static final int middle_section=0x7f070000;
         public static final int pause=0x7f070005;
-        public static final int subtitles=0x7f07000b;
-        public static final int surface_view=0x7f07000c;
-        public static final int time_current=0x7f070007;
+        public static final int select=0x7f07000a;
+        public static final int subtitles=0x7f07000c;
+        public static final int surface_view=0x7f07000d;
+        public static final int time_current=0x7f070008;
         public static final int time_duration=0x7f070009;
         public static final int top_chrome=0x7f070001;
         public static final int video_title=0x7f070003;
     }
     public static final class layout {
-        public static final int playback_control_layer=0x7f030000;
-        public static final int subtitle_layer=0x7f030001;
-        public static final int video_surface_layer=0x7f030002;
+        public static final int playback_control_land_layer=0x7f030000;
+        public static final int playback_control_layer=0x7f030001;
+        public static final int subtitle_layer=0x7f030002;
+        public static final int video_surface_layer=0x7f030003;
     }
     public static final class string {
         public static final int fullscreen_button=0x7f050000;

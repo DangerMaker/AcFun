@@ -40,7 +40,7 @@ public class ProgressAnimBar extends RelativeLayout {
         textView = (TextView) view.findViewById(R.id.text);
 
         animationDrawable = (AnimationDrawable) imageView.getDrawable();
-        textView.setText("正在加载...");
+        textView.setText("0%");
     }
 
     ;
@@ -55,7 +55,19 @@ public class ProgressAnimBar extends RelativeLayout {
             animationDrawable.stop();
     }
 
-    public void setProgress(){
+    @Override
+    public void setVisibility(int visibility) {
+        super.setVisibility(visibility);
+        if(visibility == VISIBLE){
+            start();
+        }else{
+            stop();
+        }
+    }
 
+    public void setProgress(int percent){
+        if(percent > -1 && percent < 101){
+            textView.setText(percent+"%");
+        }
     }
 }

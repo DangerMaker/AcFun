@@ -4,12 +4,8 @@
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_full_screen.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_overflow.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_overflow.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_return_from_full_screen.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_return_from_full_screen.png"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_lock.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_lock.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
@@ -24,15 +20,79 @@
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_play_large.png"
     },
     {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_play.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_play.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\btn_back_nor.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\btn_back_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_pause.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_pause.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\arrow_white.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\indicator_quality.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\indicator_quality.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_overflow.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_overflow.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_return_from_full_screen.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_return_from_full_screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\seekbar_primary.9.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\seekbar_primary.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\btn_player_back_nor.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\btn_player_back_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_set.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_set.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_pause.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_pause.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_send_barrage.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_send_barrage.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\gmf_icon.png",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\gmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_open_barrage.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_open_barrage.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_logo_in_player.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_logo_in_player.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_play.png",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_play.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_action_pause.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_action_pause.png"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\seekbar_front.9.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\seekbar_front.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_progress_thumb.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_progress_thumb.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\seekbar_bg.9.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\seekbar_bg.9.png"
     }
 ]

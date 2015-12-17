@@ -39,14 +39,14 @@ public class MainActivity extends BaseActivity{
 //    @Nullable
 //    @Bind(R.id.image_loading)
 //    SimpleDraweeView simpleDraweeView;
-    @Bind(R.id.progressbar)
-    ProgressAnimBar progressAnimBar;
+//    @Bind(R.id.progressbar)
+//    ProgressAnimBar progressAnimBar;
 
     @OnClick(R.id.video_small_screen)
     void enterFullScreen(){
         Video video = new Video("http://cmcc.ips.cnlive.com/content/movie?contentId=610715507&productid=2028593910&ratelevel=3",
                 Video.VideoType.HLS);
-        VideoItem videoItem = new VideoItem("acfun",video,null);
+        VideoItem videoItem = new VideoItem("弹幕网啦啦啦弹幕网啦啦啦弹幕网啦啦啦",video,null);
         FishApplication.videoItem = videoItem;
         Intent intent = new Intent();
         intent.setClass(this, VideoActivity.class);
@@ -59,7 +59,7 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 //        initView();
-        start();
+//        start();
     }
 
 //    private void initView(){
@@ -71,26 +71,26 @@ public class MainActivity extends BaseActivity{
 //        simpleDraweeView.setController(controller);
 //    }
 
-    private void start(){
-        progressAnimBar.start();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                handler.sendEmptyMessage(0);
-            }
-        }).start();
-    }
+//    private void start(){
+//        progressAnimBar.start();
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                handler.sendEmptyMessage(0);
+//            }
+//        }).start();
+//    }
 
 
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-           progressAnimBar.stop();
-        }
-    };
+//    Handler handler = new Handler(){
+//        @Override
+//        public void handleMessage(Message msg) {
+//           progressAnimBar.stop();
+//        }
+//    };
 }

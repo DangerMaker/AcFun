@@ -2,6 +2,8 @@ package com.fish.acfun;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -10,6 +12,7 @@ import android.widget.FrameLayout;
 import com.fish.acfun.base.BaseActivity;
 import com.fish.acfun.model.VideoItem;
 import com.fish.acfun.player.ImaPlayer;
+import com.fish.acfun.widget.ProgressAnimBar;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.libraries.mediaframework.exoplayerextensions.ExoplayerWrapper;
 
@@ -25,6 +28,8 @@ public class VideoActivity extends BaseActivity {
     @Bind(R.id.loading)
     FrameLayout loading;
     private ImaPlayer imaPlayer;
+    @Bind(R.id.progressbar)
+    ProgressAnimBar progressAnimBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,21 +68,28 @@ public class VideoActivity extends BaseActivity {
         @Override
         public void onStateChanged(boolean playWhenReady, int playbackState) {
             // Do nothing. VideoSurfaceLayer doesn't care about state changes.
-            Log.e("Exo",playbackState+"");
-            if(playWhenReady && playbackState== ExoPlayer.STATE_READY) {
+            Log.e("Exo", playbackState + "");
+            if (playbackState == ExoPlayer.STATE_BUFFERING) {
+                progressAnimBar.setVisibility(View.VISIBLE);
+                handler.sendEmptyMessageDelayed(0, 150);
+            }
+
+            if (playWhenReady && playbackState == ExoPlayer.STATE_READY) {
                 loading.setVisibility(View.GONE);
+                progressAnimBar.setVisibility(View.GONE);
+                handler.removeMessages(0);
             }
         }
 
         @Override
         public void onError(Exception e) {
             // Do nothing. VideoSurfaceLayer doesn't care about errors here.
-            Log.e("Exo","onError");
+            Log.e("Exo", "onError");
         }
 
         @Override
         public void onVideoSizeChanged(int width, int height, int unappliedRotationDegrees, float pixelWidthAspectRatio) {
-            Log.e("Exo","onVideoSizeChanged");
+            Log.e("Exo", "onVideoSizeChanged");
         }
     };
 
@@ -86,6 +98,27 @@ public class VideoActivity extends BaseActivity {
         if (imaPlayer != null) {
             imaPlayer.release();
         }
+        handler.removeMessages(0);
         super.onDestroy();
     }
+
+    int i = 0;
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    if (imaPlayer != null) {
+                        i = imaPlayer.getContentPlayer().getPlaybackControlLayer().getLayerManager().getExoplayerWrapper().getBufferedPercentage();
+                        progressAnimBar.setProgress(i);
+                        Log.e("percent",i + "");
+                        handler.sendEmptyMessageDelayed(0, 1000);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    };
 }
