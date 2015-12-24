@@ -22,7 +22,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Nullable
     @Bind(R.id.toolbar)
-    Toolbar toobar;
+    Toolbar toolbar;
 
     @Nullable
     @Bind(R.id.ivLogo)
@@ -42,8 +42,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void setupToolbar() {
-        if (toobar != null) {
-            setSupportActionBar(toobar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
         }
     }
 
@@ -55,7 +55,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public Toolbar getToobar() {
-        return toobar;
+        return toolbar;
     }
 
     public ImageView getIvLogo() {

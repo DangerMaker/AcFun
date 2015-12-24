@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_rank"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:placeholderImage="@drawable/loading_bg"
+    app:placeholderImageScaleType="fitXY"
+    app:viewAspectRatio="3.4"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+</com.facebook.drawee.view.SimpleDraweeView>

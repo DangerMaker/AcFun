@@ -13,11 +13,13 @@ import com.squareup.okhttp.OkHttpClient;
  */
 public class FishApplication extends Application {
     static VideoItem videoItem;
+    public static Application application;
     @Override
     public void onCreate() {
         super.onCreate();
         //config for fresco
         ImagePipelineConfig imagePipelineConfig = OkHttpImagePipelineConfigFactory.newBuilder(this,new OkHttpClient()).build();
         Fresco.initialize(this,imagePipelineConfig);
+        application = this;
     }
 }
