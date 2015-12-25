@@ -16,6 +16,7 @@ import android.view.View;
 
 import com.fish.acfun.base.BaseActivity;
 import com.fish.acfun.fragment.BaseLoadFragment;
+import com.fish.acfun.fragment.EmptyFragment;
 import com.fish.acfun.fragment.HomeFragment;
 
 import butterknife.Bind;
@@ -56,7 +57,13 @@ public class HomeActivity extends BaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new HomeFragment();
+            switch (position){
+                case 0:
+                    return new HomeFragment();
+                default:
+                    return new EmptyFragment();
+            }
+
         }
 
         @Override

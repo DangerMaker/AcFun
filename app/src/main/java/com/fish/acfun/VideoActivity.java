@@ -9,14 +9,23 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
+import com.fish.acfun.api.CmsApi;
+import com.fish.acfun.api.RestService;
 import com.fish.acfun.base.BaseActivity;
+import com.fish.acfun.base.Config;
 import com.fish.acfun.model.VideoItem;
+import com.fish.acfun.model.VideoPlays;
 import com.fish.acfun.player.ImaPlayer;
 import com.fish.acfun.widget.ProgressAnimBar;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.libraries.mediaframework.exoplayerextensions.ExoplayerWrapper;
+import com.google.android.libraries.mediaframework.exoplayerextensions.Video;
 
 import butterknife.Bind;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 /**
  * Created by lyjq on 2015/12/15.
@@ -31,6 +40,7 @@ public class VideoActivity extends BaseActivity {
     @Bind(R.id.progressbar)
     ProgressAnimBar progressAnimBar;
 
+    VideoPlays videoPlays;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +49,27 @@ public class VideoActivity extends BaseActivity {
         setContentView(R.layout.activity_video);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        if (FishApplication.videoItem != null)
-            createImaPlayer(FishApplication.videoItem);
+        final String videoId = getIntent().getStringExtra("videoId");
+        Call<VideoPlays> call = RestService.getRestAPI(Config.CMS_URL).create(CmsApi.class).getVideoPlays(videoId);
+        call.enqueue(new Callback<VideoPlays>() {
+            @Override
+            public void onResponse(Response<VideoPlays> response, Retrofit retrofit) {
+                Log.e("VideoPlays","onResponse");
+                videoPlays = response.body();
+                if(videoPlays != null) {
+                    Video video = new Video(videoPlays.getData().getFiles().get(0).getUrl().get(0),
+                            Video.VideoType.MP4);
+                    VideoItem videoItem = new VideoItem(videoPlays.getData().getTitle(), video, null);
+                    if (videoItem != null)
+                        createImaPlayer(videoItem);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                Log.e("VideoPlays","onFailure");
+            }
+        });
     }
 
     public void createImaPlayer(VideoItem videoItem) {

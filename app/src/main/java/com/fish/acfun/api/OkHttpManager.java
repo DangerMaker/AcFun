@@ -1,7 +1,9 @@
 package com.fish.acfun.api;
 
 import com.fish.acfun.FishApplication;
+import com.fish.acfun.util.NetworkUtils;
 import com.squareup.okhttp.Cache;
+import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -43,12 +45,22 @@ public class OkHttpManager {
     static Interceptor interceptor = new Interceptor() {
         @Override
         public Response intercept(Chain chain) throws IOException {
-            Request newRequest = chain.request().newBuilder()
-                    .addHeader("deviceType","1")
+             Request.Builder builder = chain.request().newBuilder();
+             builder.addHeader("deviceType","1")
                     .addHeader("appVersion","4.0.5")
                     .addHeader("udid","17755e47-14ac-3fd3-a1b9-f38f3c5e0754")
                     .addHeader("market","xiaomi")
-                    .addHeader("User-Agent", "hello muggle").build();
+                    .addHeader("User-Agent", "hello muggle");
+            if (NetworkUtils.isNetworkAvaliable(FishApplication.application)) {
+                int maxAge = 600; // read from cache for 10 minute
+                builder.addHeader("Cache-Control", "public, max-age=" + maxAge);
+            } else {
+                int maxStale = 60 * 60 * 24 * 28; // tolerate 4-weeks stale
+                builder.addHeader("Cache-Control",
+                        "public, only-if-cached, max-stale=" + maxStale);
+            }
+
+            Request newRequest =builder.build();
             return chain.proceed(newRequest);
         }
     };

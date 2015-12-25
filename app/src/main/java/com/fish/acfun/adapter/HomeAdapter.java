@@ -13,6 +13,7 @@ import com.fish.acfun.R;
 import com.fish.acfun.base.BaseRecyclerAdapter;
 import com.fish.acfun.fragment.BaseLoadFragment;
 import com.fish.acfun.model.HomeDataItem;
+import com.fish.acfun.util.GifUtil;
 import com.fish.acfun.widget.BannerView;
 import com.fish.acfun.widget.HomeVieo;
 
@@ -82,7 +83,7 @@ public class HomeAdapter extends BaseRecyclerAdapter<HomeDataItem> {
                 break;
             case HOME_TYPE_BANNERS:
                 HomeRankHolder homeRankHolder = (HomeRankHolder) holder;
-                homeRankHolder.simpleDraweeView.setImageURI(Uri.parse(item.getContents().get(0).getImage()));
+                GifUtil.loadImage(item.getContents().get(0).getImage(),homeRankHolder.simpleDraweeView);
                 break;
         }
     }
