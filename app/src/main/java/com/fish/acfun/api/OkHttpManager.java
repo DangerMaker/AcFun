@@ -1,5 +1,7 @@
 package com.fish.acfun.api;
 
+import com.fish.acfun.FishApplication;
+import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -28,6 +30,9 @@ public class OkHttpManager {
                     sInstance.setReadTimeout(15, TimeUnit.SECONDS);
                     //连接主机超时
                     sInstance.setConnectTimeout(20, TimeUnit.SECONDS);
+                    int cacheSize = 10 * 1024 * 1024;
+                    Cache cache = new Cache(FishApplication.application.getCacheDir(), cacheSize);
+                    sInstance.setCache(cache);
                     sInstance.interceptors().add(interceptor);
                 }
             }

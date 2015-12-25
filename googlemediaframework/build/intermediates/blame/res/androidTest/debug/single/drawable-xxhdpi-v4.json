@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_send_barrage.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\gmf_icon.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\gmf_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_open_barrage.png",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\icon_open_barrage.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\gmf_icon.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\gmf_icon.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AcFun\\googlemediaframework\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\icon_logo_in_player.png",

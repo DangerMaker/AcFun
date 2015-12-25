@@ -4,6 +4,15 @@ package com.fish.acfun.model;
  * Created by lyjq on 2015/12/20.
  */
 public class VisitEntity {
+    /**
+     * comments : 99
+     * danmakuSize : 155
+     * goldBanana : 157
+     * score : 0
+     * stows : 83
+     * ups : 0
+     * views : 111606
+     */
     private int comments;
     private int danmakuSize;
     private int goldBanana;

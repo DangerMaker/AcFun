@@ -25,6 +25,8 @@
 
         <activity android:name=".ScrollingActivity"></activity>
 
+        <activity android:name=".VideoDetailActivity"/>
+
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
